@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Johnman67112/go_api/models"
+	"github.com/Johnman67112/go_api/routes"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	models.Personalities = []models.Personality{
+		{Name: "Name 1", Story: "Story 1"},
+		{Name: "Name 2", Story: "Story 2"},
+	}
+
+	fmt.Println("Start Rest server with Go")
+	routes.HandleRequest()
 }
